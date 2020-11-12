@@ -6,8 +6,8 @@ class Soldier : public NPCJobDecorator
 public:
     Soldier(INPC *component) : NPCJobDecorator(component) {}
 
-    std::string GetName() const override
+    std::string Render() const override
     {
-        return "Soldier(" + NPCJobDecorator::GetName() + ")";
+        return "Soldier(" + NPCJobDecorator::Render() + ")";
     }
 };

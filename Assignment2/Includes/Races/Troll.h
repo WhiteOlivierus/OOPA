@@ -6,8 +6,8 @@ class Troll : public NPCRaceDecorator
 public:
     Troll(INPC *component) : NPCRaceDecorator(component) {}
 
-    std::string GetName() const override
+    std::string Render() const override
     {
-        return "Troll(" + NPCRaceDecorator::GetName() + ")";
+        return "Troll(" + NPCRaceDecorator::Render() + ")";
     }
 };

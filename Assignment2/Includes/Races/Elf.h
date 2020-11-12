@@ -6,8 +6,8 @@ class Elf : public NPCRaceDecorator
 public:
     Elf(INPC *component) : NPCRaceDecorator(component) {}
 
-    std::string GetName() const override
+    std::string Render() const override
     {
-        return "Elf(" + NPCRaceDecorator::GetName() + ")";
+        return "Elf(" + NPCRaceDecorator::Render() + ")";
     }
 };

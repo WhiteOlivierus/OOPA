@@ -9,8 +9,8 @@ protected:
 public:
     NPCJobDecorator(INPC *component) : component_(component) {}
 
-    std::string GetName() const override
+    std::string Render() const override
     {
-        return this->component_->GetName();
+        return this->component_->Render();
     }
 };

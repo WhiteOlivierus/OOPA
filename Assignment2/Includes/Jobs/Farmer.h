@@ -6,8 +6,8 @@ class Farmer : public NPCJobDecorator
 public:
     Farmer(INPC *component) : NPCJobDecorator(component) {}
 
-    std::string GetName() const override
+    std::string Render() const override
     {
-        return "Farmer(" + NPCJobDecorator::GetName() + ")";
+        return "Farmer(" + NPCJobDecorator::Render() + ")";
     }
 };

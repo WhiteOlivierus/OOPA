@@ -4,7 +4,7 @@
 class BaseNPC : public INPC
 {
 public:
-    std::string GetName() const override
+    std::string Render() const override
     {
         return "Base NPC";
     }
