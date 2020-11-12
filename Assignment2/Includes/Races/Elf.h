@@ -1,13 +1,13 @@
 #pragma once
-#include "../NPC/NPCDecorator.h"
+#include "../NPC/NPCRaceDecorator.h"
 
-class Elf : public NPCDecorator
+class Elf : public NPCRaceDecorator
 {
 public:
-    Elf(INPC *component) : NPCDecorator(component) {}
+    Elf(INPC *component) : NPCRaceDecorator(component) {}
 
-    std::string Operation() const override
+    std::string GetName() const override
     {
-        return "Elf(" + NPCDecorator::Operation() + ")";
+        return "Elf(" + NPCRaceDecorator::GetName() + ")";
     }
 };

@@ -1,13 +1,13 @@
 #pragma once
-#include "../NPC/NPCDecorator.h"
+#include "../NPC/NPCRaceDecorator.h"
 
-class Troll : public NPCDecorator
+class Troll : public NPCRaceDecorator
 {
 public:
-    Troll(INPC *component) : NPCDecorator(component) {}
+    Troll(INPC *component) : NPCRaceDecorator(component) {}
 
-    std::string Operation() const override
+    std::string GetName() const override
     {
-        return "Troll(" + NPCDecorator::Operation() + ")";
+        return "Troll(" + NPCRaceDecorator::GetName() + ")";
     }
 };

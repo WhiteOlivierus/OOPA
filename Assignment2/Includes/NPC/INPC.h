@@ -4,5 +4,5 @@
 class INPC
 {
 public:
-    virtual std::string Operation() const = 0;
+    virtual std::string GetName() const = 0;
 };
