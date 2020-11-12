@@ -11,9 +11,13 @@ std::string Transaction::GetDate() const
 {
     struct tm buf;
     char str[26];
-    errno_t t = localtime_s(&buf, &dateTime);
+
+    localtime_s(&buf, &dateTime);
     asctime_s(str, sizeof str, &buf);
+
     std::string out = std::string(str);
+
     out.erase(std::remove(out.begin(), out.end(), '\n'), out.end());
+    
     return out;
 }
