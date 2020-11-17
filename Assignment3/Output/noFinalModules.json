@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Physics",
+        "students": [
+            {
+                "Age": 19,
+                "Firstname": "Alice",
+                "Lastname": "Fleming"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 23,
+                "Firstname": "Salvador",
+                "Lastname": "Sims"
+            },
+            {
+                "Age": 26,
+                "Firstname": "Ulric",
+                "Lastname": "Reynolds"
+            },
+            {
+                "Age": 19,
+                "Firstname": "Sharon",
+                "Lastname": "Kent"
+            },
+            {
+                "Age": 18,
+                "Firstname": "Winifred",
+                "Lastname": "Poole"
+            },
+            {
+                "Age": 26,
+                "Firstname": "Melissa",
+                "Lastname": "Burch"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 26,
+                "Firstname": "Melissa",
+                "Lastname": "Burch"
+            },
+            {
+                "Age": 23,
+                "Firstname": "Salvador",
+                "Lastname": "Sims"
+            }
+        ],
+        "teacher": {
+            "Age": 60,
+            "Firstname": "Amal",
+            "Lastname": "Elliott"
+        }
+    },
+    {
+        "name": "Home economics",
+        "students": [
+            {
+                "Age": 26,
+                "Firstname": "Ulric",
+                "Lastname": "Reynolds"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 26,
+                "Firstname": "Melissa",
+                "Lastname": "Burch"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Benedict",
+                "Lastname": "Odom"
+            },
+            {
+                "Age": 28,
+                "Firstname": "Kenneth",
+                "Lastname": "Lawson"
+            },
+            {
+                "Age": 28,
+                "Firstname": "Kenneth",
+                "Lastname": "Lawson"
+            },
+            {
+                "Age": 28,
+                "Firstname": "Kenneth",
+                "Lastname": "Lawson"
+            },
+            {
+                "Age": 23,
+                "Firstname": "Salvador",
+                "Lastname": "Sims"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Benedict",
+                "Lastname": "Odom"
+            },
+            {
+                "Age": 23,
+                "Firstname": "Salvador",
+                "Lastname": "Sims"
+            }
+        ],
+        "teacher": {
+            "Age": 49,
+            "Firstname": "Marny",
+            "Lastname": "Beck"
+        }
+    },
+    {
+        "name": "Auto mechanics",
+        "students": [
+            {
+                "Age": 28,
+                "Firstname": "Kenneth",
+                "Lastname": "Lawson"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 28,
+                "Firstname": "Kenneth",
+                "Lastname": "Lawson"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 19,
+                "Firstname": "Alice",
+                "Lastname": "Fleming"
+            },
+            {
+                "Age": 18,
+                "Firstname": "Winifred",
+                "Lastname": "Poole"
+            },
+            {
+                "Age": 20,
+                "Firstname": "Gisela",
+                "Lastname": "Lawrence"
+            },
+            {
+                "Age": 26,
+                "Firstname": "Melissa",
+                "Lastname": "Burch"
+            },
+            {
+                "Age": 18,
+                "Firstname": "Winifred",
+                "Lastname": "Poole"
+            }
+        ],
+        "teacher": {
+            "Age": 35,
+            "Firstname": "Cally",
+            "Lastname": "Head"
+        }
+    }
+]

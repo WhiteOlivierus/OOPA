@@ -4,7 +4,7 @@
 class Shaman : public NPCJobDecorator
 {
 public:
-    Shaman(INPC *component) : NPCJobDecorator(component) {}
+    Shaman(`` *component) : NPCJobDecorator(component) {}
 
     std::string Render() const override
     {
