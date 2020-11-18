@@ -1,19 +1,20 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <fstream>
 #include <ctime>
-#include <iomanip>
+
+#include "Includes/Module.cpp"
+#include "Includes/Utilities.cpp"
+#include "Includes/Random.cpp"
 
 #include "Includes/nlohmann/json.hpp"
-#include "Includes/Module.cpp"
-
 using json = nlohmann::json;
 
 int main(int, char **)
 {
     const int amountOfModules = 3;
     const int studentsPerModule = 10;
+    const int studentsPerClass = 15;
 
     //Load all data
     std::ifstream modulesInput("Input/notModules.json");
@@ -27,63 +28,62 @@ int main(int, char **)
     std::vector<std::string> modulesNames = json.get<std::vector<std::string>>();
 
     //Load teachers from json
-    teachersInput >> json;
     std::vector<Person> teachers;
-    for (auto i : json)
-    {
-        Person teacher;
-        from_json(i, teacher);
-        teachers.push_back(teacher);
-    }
+    LoadPersons(json, teachersInput, teachers);
 
     //Load students from json
-    studentsInput >> json;
     std::vector<Person> students;
-    for (auto i : json)
-    {
-        Person student;
-        from_json(i, student);
-        students.push_back(student);
-    }
+    LoadPersons(json, studentsInput, students);
 
     //Set random seed
     srand((unsigned)time(0));
 
-    std::vector<Module> modules;
+    //Create class of students
+    std::vector<Person> studentsClass;
+    for (int i = 0; i < studentsPerClass; i++)
+        studentsClass.push_back(*select_randomly(students.begin(), students.end()));
+
+    std::vector<Module *> modules;
 
     //Loop for creating modules
     for (int i = 0; i < amountOfModules; i++)
     {
-
         //Get 1 referenced random module
-        int randomIndex = 1 + (rand() % modulesNames.size());
-        std::string randomModule = modulesNames[randomIndex];
+        std::string randomModule = *select_randomly(modulesNames.begin(), modulesNames.end());
 
         //Get 1 referenced random teacher
-        randomIndex = 1 + (rand() % teachers.size());
-        Person &randomTeacher = teachers[randomIndex];
+        Person randomTeacher = *select_randomly(teachers.begin(), teachers.end());
 
         //Get 10 referenced random students
         std::vector<Person> randomStudents;
         for (int i = 0; i < studentsPerModule; i++)
-        {
-            randomIndex = 1 + (rand() % studentsPerModule);
-            randomStudents.push_back(students[randomIndex]);
-        }
+            randomStudents.push_back(*select_randomly(studentsClass.begin(), studentsClass.end()));
 
         //Create module
-        modules.push_back(Module(randomModule, randomTeacher, randomStudents));
+        modules.push_back(new Module(randomModule, randomTeacher, randomStudents));
     }
     //End loop
 
-    //Show in console
-    for (auto &module : modules)
-        std::cout << module << std::endl;
+    //Dump json
+    DumpModules(modules, "Output/noFinalModules.json");
 
-    //Dump modules to json
-    json = modules;
+    //Start assignment
+    //Show ECS per student
+    DumpECS(modules, studentsClass, "Output/ecsOriginal.json");
 
-    std::ofstream output("Output/noFinalModules.json");
+    //Change EC for one module
+    modules[0]->EC = 10;
 
-    output << std::setw(4) << json << std::endl;
+    //Show ECS per student again
+    DumpECS(modules, studentsClass, "Output/ecsChanged.json");
+
+    //Clear students from module
+    modules[0]->ClearStudents();
+
+    //Show ECS per student again
+    DumpECS(modules, studentsClass, "Output/ecsStudentsRemoved.json");
+
+    //Clean up
+    for (auto &&module : modules)
+        delete module;
 }

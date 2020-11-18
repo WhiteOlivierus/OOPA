@@ -1,182 +1,182 @@
 [
     {
-        "name": "Physics",
+        "name": "Racket sports",
         "students": [
             {
-                "Age": 19,
-                "Firstname": "Alice",
-                "Lastname": "Fleming"
+                "Age": 32,
+                "Firstname": "Ferris",
+                "Lastname": "Ferguson"
             },
             {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
+                "Age": 25,
+                "Firstname": "Clarke",
+                "Lastname": "Kidd"
             },
             {
-                "Age": 23,
-                "Firstname": "Salvador",
-                "Lastname": "Sims"
+                "Age": 24,
+                "Firstname": "Maisie",
+                "Lastname": "Brennan"
+            },
+            {
+                "Age": 25,
+                "Firstname": "Clarke",
+                "Lastname": "Kidd"
+            },
+            {
+                "Age": 30,
+                "Firstname": "Kadeem",
+                "Lastname": "King"
+            },
+            {
+                "Age": 25,
+                "Firstname": "Tiger",
+                "Lastname": "Carson"
+            },
+            {
+                "Age": 22,
+                "Firstname": "Upton",
+                "Lastname": "Gomez"
+            },
+            {
+                "Age": 24,
+                "Firstname": "Maisie",
+                "Lastname": "Brennan"
+            },
+            {
+                "Age": 25,
+                "Firstname": "Tiger",
+                "Lastname": "Carson"
             },
             {
                 "Age": 26,
-                "Firstname": "Ulric",
-                "Lastname": "Reynolds"
-            },
-            {
-                "Age": 19,
-                "Firstname": "Sharon",
-                "Lastname": "Kent"
-            },
-            {
-                "Age": 18,
-                "Firstname": "Winifred",
-                "Lastname": "Poole"
-            },
-            {
-                "Age": 26,
-                "Firstname": "Melissa",
-                "Lastname": "Burch"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
-            },
-            {
-                "Age": 26,
-                "Firstname": "Melissa",
-                "Lastname": "Burch"
-            },
-            {
-                "Age": 23,
-                "Firstname": "Salvador",
-                "Lastname": "Sims"
+                "Firstname": "Rahim",
+                "Lastname": "Howard"
             }
         ],
         "teacher": {
-            "Age": 60,
-            "Firstname": "Amal",
-            "Lastname": "Elliott"
+            "Age": 57,
+            "Firstname": "Colorado",
+            "Lastname": "Branch"
         }
     },
     {
-        "name": "Home economics",
+        "name": "Ancient Greek",
         "students": [
             {
-                "Age": 26,
-                "Firstname": "Ulric",
-                "Lastname": "Reynolds"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
+                "Age": 22,
+                "Firstname": "Upton",
+                "Lastname": "Gomez"
             },
             {
                 "Age": 26,
-                "Firstname": "Melissa",
-                "Lastname": "Burch"
+                "Firstname": "Cyrus",
+                "Lastname": "Byers"
             },
             {
-                "Age": 20,
-                "Firstname": "Benedict",
-                "Lastname": "Odom"
-            },
-            {
-                "Age": 28,
-                "Firstname": "Kenneth",
-                "Lastname": "Lawson"
-            },
-            {
-                "Age": 28,
-                "Firstname": "Kenneth",
-                "Lastname": "Lawson"
-            },
-            {
-                "Age": 28,
-                "Firstname": "Kenneth",
-                "Lastname": "Lawson"
-            },
-            {
-                "Age": 23,
-                "Firstname": "Salvador",
-                "Lastname": "Sims"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Benedict",
-                "Lastname": "Odom"
-            },
-            {
-                "Age": 23,
-                "Firstname": "Salvador",
-                "Lastname": "Sims"
-            }
-        ],
-        "teacher": {
-            "Age": 49,
-            "Firstname": "Marny",
-            "Lastname": "Beck"
-        }
-    },
-    {
-        "name": "Auto mechanics",
-        "students": [
-            {
-                "Age": 28,
-                "Firstname": "Kenneth",
-                "Lastname": "Lawson"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
-            },
-            {
-                "Age": 28,
-                "Firstname": "Kenneth",
-                "Lastname": "Lawson"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
+                "Age": 22,
+                "Firstname": "Upton",
+                "Lastname": "Gomez"
             },
             {
                 "Age": 19,
-                "Firstname": "Alice",
-                "Lastname": "Fleming"
-            },
-            {
-                "Age": 18,
-                "Firstname": "Winifred",
-                "Lastname": "Poole"
-            },
-            {
-                "Age": 20,
-                "Firstname": "Gisela",
-                "Lastname": "Lawrence"
+                "Firstname": "Grady",
+                "Lastname": "Hancock"
             },
             {
                 "Age": 26,
-                "Firstname": "Melissa",
-                "Lastname": "Burch"
+                "Firstname": "Rahim",
+                "Lastname": "Howard"
             },
             {
-                "Age": 18,
-                "Firstname": "Winifred",
-                "Lastname": "Poole"
+                "Age": 25,
+                "Firstname": "Fletcher",
+                "Lastname": "Padilla"
+            },
+            {
+                "Age": 19,
+                "Firstname": "Grady",
+                "Lastname": "Hancock"
+            },
+            {
+                "Age": 21,
+                "Firstname": "Mara",
+                "Lastname": "Gibson"
+            },
+            {
+                "Age": 25,
+                "Firstname": "Fletcher",
+                "Lastname": "Padilla"
+            },
+            {
+                "Age": 22,
+                "Firstname": "Upton",
+                "Lastname": "Gomez"
             }
         ],
         "teacher": {
-            "Age": 35,
-            "Firstname": "Cally",
-            "Lastname": "Head"
+            "Age": 57,
+            "Firstname": "Sierra",
+            "Lastname": "Oconnor"
+        }
+    },
+    {
+        "name": "Religious studies",
+        "students": [
+            {
+                "Age": 29,
+                "Firstname": "Kimberly",
+                "Lastname": "Cherry"
+            },
+            {
+                "Age": 21,
+                "Firstname": "Mara",
+                "Lastname": "Gibson"
+            },
+            {
+                "Age": 30,
+                "Firstname": "Kadeem",
+                "Lastname": "King"
+            },
+            {
+                "Age": 26,
+                "Firstname": "Cyrus",
+                "Lastname": "Byers"
+            },
+            {
+                "Age": 25,
+                "Firstname": "Fletcher",
+                "Lastname": "Padilla"
+            },
+            {
+                "Age": 30,
+                "Firstname": "Kadeem",
+                "Lastname": "King"
+            },
+            {
+                "Age": 19,
+                "Firstname": "Grady",
+                "Lastname": "Hancock"
+            },
+            {
+                "Age": 29,
+                "Firstname": "Neil",
+                "Lastname": "Nelson"
+            },
+            {
+                "Age": 29,
+                "Firstname": "Kimberly",
+                "Lastname": "Cherry"
+            },
+            {
+                "Age": 29,
+                "Firstname": "Neil",
+                "Lastname": "Nelson"
+            }
+        ],
+        "teacher": {
+            "Age": 56,
+            "Firstname": "Joshua",
+            "Lastname": "Wilkerson"
         }
     }
 ]

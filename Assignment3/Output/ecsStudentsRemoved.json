@@ -1,0 +1,92 @@
+[
+    2,
+    {
+        "Age": 26,
+        "Firstname": "Rahim",
+        "Lastname": "Howard"
+    },
+    4,
+    {
+        "Age": 19,
+        "Firstname": "Grady",
+        "Lastname": "Hancock"
+    },
+    2,
+    {
+        "Age": 29,
+        "Firstname": "Kimberly",
+        "Lastname": "Cherry"
+    },
+    2,
+    {
+        "Age": 30,
+        "Firstname": "Kadeem",
+        "Lastname": "King"
+    },
+    4,
+    {
+        "Age": 21,
+        "Firstname": "Mara",
+        "Lastname": "Gibson"
+    },
+    0,
+    {
+        "Age": 32,
+        "Firstname": "Emi",
+        "Lastname": "Castillo"
+    },
+    2,
+    {
+        "Age": 22,
+        "Firstname": "Upton",
+        "Lastname": "Gomez"
+    },
+    0,
+    {
+        "Age": 24,
+        "Firstname": "Maisie",
+        "Lastname": "Brennan"
+    },
+    0,
+    {
+        "Age": 25,
+        "Firstname": "Clarke",
+        "Lastname": "Kidd"
+    },
+    4,
+    {
+        "Age": 25,
+        "Firstname": "Fletcher",
+        "Lastname": "Padilla"
+    },
+    0,
+    {
+        "Age": 25,
+        "Firstname": "Tiger",
+        "Lastname": "Carson"
+    },
+    4,
+    {
+        "Age": 26,
+        "Firstname": "Cyrus",
+        "Lastname": "Byers"
+    },
+    0,
+    {
+        "Age": 32,
+        "Firstname": "Ferris",
+        "Lastname": "Ferguson"
+    },
+    2,
+    {
+        "Age": 29,
+        "Firstname": "Neil",
+        "Lastname": "Nelson"
+    },
+    0,
+    {
+        "Age": 22,
+        "Firstname": "Astra",
+        "Lastname": "Mccall"
+    }
+]

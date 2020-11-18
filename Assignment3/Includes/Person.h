@@ -3,6 +3,8 @@
 
 #include "Includes/nlohmann/json.hpp"
 
+#pragma once
+
 class Person
 {
 private:
@@ -19,4 +21,6 @@ public:
     std::string GetFullName() const;
 
     friend std::ostream &operator<<(std::ostream &outStream, const Person &person);
+
+    bool operator==(const Person &other) const;
 };
