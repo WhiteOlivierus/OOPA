@@ -58,7 +58,7 @@ double Sum(std::vector<double> &input)
 }
 
 template <typename T>
-void PrintVector(std::string title, std::vector<T> vector)
+void PrintVector(std::string &title, std::vector<T> vector)
 {
     std::cout << title << std::endl;
 
