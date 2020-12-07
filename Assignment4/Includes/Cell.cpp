@@ -1,6 +1,6 @@
-#include "Includes/Cell.h"
-
 #pragma once
+
+#include "Includes/Cell.h"
 
 Cell::Cell() {}
 

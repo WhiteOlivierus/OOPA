@@ -1,11 +1,12 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <string>
 
 #include "Includes/Screen.cpp"
 #include "Includes/Cell.cpp"
-
-#pragma once
 
 class Grid
 {
@@ -26,5 +27,6 @@ public:
     void Render();
     void Update();
     void FlipCell(int x, int y);
-    void GetNeighbors(int index, Cell *&current, std::vector<Cell *> &neighbors);
+    void GetNeighbors(int index, std::vector<Cell *> &neighbors);
+    void GetCurrent(int index, Cell *&current);
 };

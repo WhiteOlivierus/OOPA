@@ -1,8 +1,8 @@
-#include "Includes/Grid.h"
-
 #pragma once
 
-Grid::Grid(int x, int y) : width(x), height(y), size(x * y)
+#include "Includes/Grid.h"
+
+Grid::Grid(int x, int y) : width(x), height(y), size((x * y) - 1)
 {
     grid = new std::vector<Cell *>(x * y);
     nextIteration = new std::vector<Cell *>(x * y);
@@ -63,11 +63,9 @@ void Grid::FlipCell(int x, int y)
     (*nextIteration)[x + width * y]->FlipCell();
 }
 
-void Grid::GetNeighbors(int index, Cell *&current, std::vector<Cell *> &neighbors)
+void Grid::GetNeighbors(int index, std::vector<Cell *> &neighbors)
 {
     neighbors.clear();
-
-    current = (*nextIteration)[index];
 
     int x = index % width;
     int y = index / width;
@@ -85,4 +83,9 @@ void Grid::GetNeighbors(int index, Cell *&current, std::vector<Cell *> &neighbor
     for (auto &&i : indexes)
         if (i <= size && i >= 0)
             neighbors.push_back((*grid)[i]);
+}
+
+void Grid::GetCurrent(int index, Cell *&current)
+{
+    current = (*nextIteration)[index];
 }
