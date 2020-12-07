@@ -48,3 +48,15 @@ void Parent::DeleteChild()
 {
     this->child.reset();
 }
+
+// move-constructor
+Parent::Parent(Parent &&other) noexcept
+{
+    std::cout << "MCTOR from Block '" << other.name << "' @" << &other << " to Block @" << this << std::endl;
+}
+
+//TODO: move-assignment operator
+Parent Parent::operator=(Parent &&parent)
+{
+    return *this;
+}

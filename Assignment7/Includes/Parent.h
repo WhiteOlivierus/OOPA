@@ -14,6 +14,9 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const Parent &parent);
 
+    Parent(Parent &&other) noexcept;   // move-constructor
+    Parent operator=(Parent &&parent); //TODO: move-assignment operator
+
     Child *GetChild();
     void DeleteChild();
 

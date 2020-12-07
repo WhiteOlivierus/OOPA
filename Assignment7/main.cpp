@@ -20,5 +20,13 @@ int main()
 
     std::cout << p1.use_count() << std::endl;
 
+    Parent p4("Parent4");
+    Parent p5("Parent5");
+
+    p4 = p5;
+
+    std::cout << p4 << std::endl;
+    std::cout << p5 << std::endl;
+
     return 0;
 }
