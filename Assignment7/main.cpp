@@ -3,21 +3,22 @@
 
 int main()
 {
-    Parent *p1 = new Parent("Parent1");
-    std::cout << "p1:" << *p1 << std::endl;
+    std::shared_ptr<Parent> p1 = std::make_shared<Parent>("Parent1");
+    std::cout << p1.use_count() << std::endl;
 
-    Parent *p2 = new Parent(*p1); // roept de copy constructor aan
-    std::cout << "p2:" << *p2 << std::endl;
+    std::shared_ptr<Parent> p2 = p1;
+    std::cout << p1.use_count() << std::endl;
 
-    Parent *p3 = new Parent("Parent3");
-    std::cout << "p3:" << *p3 << std::endl;
+    std::shared_ptr<Parent> p3 = p1;
+    std::cout << p1.use_count() << std::endl;
 
-    *p3 = *p1; // roept de assignment operator aan
-    std::cout << "p1:" << *p3 << std::endl;
+    std::cout << (*p1.get()->GetChild()) << std::endl;
 
-    delete p1;
-    delete p2;
-    delete p3;
+    p2.get()->DeleteChild();
+
+    std::cout << (*p1.get()->GetChild()) << std::endl;
+
+    std::cout << p1.use_count() << std::endl;
 
     return 0;
 }

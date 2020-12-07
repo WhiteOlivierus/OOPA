@@ -14,7 +14,10 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const Parent &parent);
 
+    Child *GetChild();
+    void DeleteChild();
+
 private:
     std::string name;
-    Child *child;
+    std::unique_ptr<Child> child;
 };
