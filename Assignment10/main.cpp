@@ -1,14 +1,16 @@
 #include <iostream>
 #include "Includes/Block.cpp"
 
-Block makeBlock(int size, std::string name) {
+Block makeBlock(int size, std::string name)
+{
     std::cout << "begin makeBlock: " << std::endl;
     Block newBlock = Block(size, name);
     std::cout << "einde makeBlock: " << newBlock << std::endl;
     return newBlock;
 }
 
-int main() {
+int main()
+{
     std::cout << "------" << std::endl;
 
     Block block1(1024, "block1");
@@ -29,7 +31,7 @@ int main() {
 
     std::cout << "------" << std::endl;
 
-    // gebruik de assignment-oper
+    // Use the assignment-oper
     block3 = block2;
     std::cout << block3 << std::endl;
 

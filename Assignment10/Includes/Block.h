@@ -12,11 +12,9 @@ public:
     Block(const Block &other);            // copy-constructor
     Block &operator=(const Block &other); // assignment-operator
 
-#ifdef MOVESEMANTICS
     // nog nodig voor de 'big five'
-    Block(Block &&other) noexcept; // move-constructor
-                                   //TODO: move-assignment operator
-#endif
+    Block(Block &&other) noexcept;  // move-constructor
+    Block operator=(Block &&block); //TODO: move-assignment operator
 
 private:
     std::string name;

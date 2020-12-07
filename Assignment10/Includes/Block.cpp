@@ -36,8 +36,6 @@ Block &Block::operator=(const Block &other)
     return *this;
 }
 
-#ifdef MOVESEMANTICS
-
 // move-constructor
 Block::Block(Block &&other) noexcept
 {
@@ -53,7 +51,10 @@ Block::Block(Block &&other) noexcept
 }
 
 //TODO: move-assignment operator
-#endif
+Block Block::operator=(Block &&block)
+{
+    return *this;
+}
 
 std::ostream &operator<<(std::ostream &os, const Block &block)
 {
