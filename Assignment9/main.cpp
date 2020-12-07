@@ -1,16 +1,21 @@
 #include <queue>
 #include <thread>
 #include <iostream>
+#include <mutex>
 
 int c = 0;
 bool done = false;
 std::queue<int> goods;
 
+std::mutex mutex;
+
 void producer()
 {
     for (int i = 0; i < 500; ++i)
     {
+        mutex.lock();
         goods.push(i);
+        mutex.unlock();
         c++;
     }
 
@@ -23,7 +28,9 @@ void consumer()
     {
         while (!goods.empty())
         {
+            mutex.lock();
             goods.pop();
+            mutex.unlock();
             c--;
         }
     }
