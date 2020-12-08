@@ -7,9 +7,22 @@
 #include "Includes/Rules/EqualsTwoOrThree.h"
 #include "Includes/Rules/Die.h"
 
+bool ApplyRules(std::vector<BaseRule *> rules, Grid *&grid, int i)
+{
+    for (auto &&rule : rules)
+    {
+        bool state = rule->Apply(grid, i);
+
+        if (state)
+            return true;
+    }
+    return false;
+}
+
 int main(int, char **)
 {
     Grid *grid = new Grid(50, 50);
+    // Grid *grid = new Grid(4, 4);
 
     std::vector<BaseRule *> rules;
 
@@ -17,15 +30,22 @@ int main(int, char **)
     rules.push_back(new MoreThanThree);
     rules.push_back(new Die);
 
-    // grid->FlipCell(2, 2);
-    // grid->FlipCell(2, 3);
-    // grid->FlipCell(3, 3);
+    //Block
+    grid->FlipCell(1, 1);
+    grid->FlipCell(2, 1);
+    grid->FlipCell(1, 2);
+    grid->FlipCell(2, 2);
+
+    //Block
     grid->FlipCell(30, 20);
     grid->FlipCell(31, 20);
-    grid->FlipCell(32, 20);
-    grid->FlipCell(33, 20);
-    grid->FlipCell(34, 20);
-    grid->FlipCell(35, 20);
+    grid->FlipCell(30, 21);
+    grid->FlipCell(31, 21);
+
+    //Blinker
+    grid->FlipCell(40, 20);
+    grid->FlipCell(41, 20);
+    grid->FlipCell(42, 20);
 
     grid->Update();
 
@@ -36,7 +56,7 @@ int main(int, char **)
 
     char escapeChar = ' ';
 
-    // escapeChar = getchar();
+    escapeChar = getchar();
 
     do
     {
@@ -44,9 +64,8 @@ int main(int, char **)
             break;
 
         for (int i = 0; i < grid->size; i++)
-            for (auto &&rule : rules)
-                if (rule->Apply(grid, i))
-                    continue;
+            if (ApplyRules(rules, grid, i))
+                continue;
 
         grid->Update();
 

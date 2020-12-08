@@ -63,29 +63,49 @@ void Grid::FlipCell(int x, int y)
     (*nextIteration)[x + width * y]->FlipCell();
 }
 
-void Grid::GetNeighbors(int index, std::vector<Cell *> &neighbors)
-{
-    neighbors.clear();
+// void Grid::GetNeighbors(int index, std::vector<Cell *> &neighbors)
+// {
+//     neighbors.clear();
 
-    int x = index % width;
-    int y = index / width;
+//     int x = index % width;
+//     int y = index / width;
 
-    int indexes[8] = {
-        (x - 1) + width * y,         //Left of current
-        (x + 1) + width * y,         //Right of current
-        x + width * (y + 1),         //Top of current
-        x + width * (y - 1),         //Bottom of current
-        (x - 1) + width * ((y + 1)), //Top Left of current
-        (x + 1) + width * (y + 1),   //Top Right of current
-        (x + 1) + width * (y - 1),   //Bottom Right of current
-        (x - 1) + width * (y - 1)};  //Bottom Left of current
+//     int indexes[8] = {
+//         (x - 1) + width * (y - 1),   //Bottom Left
+//         x + width * (y - 1),         //Bottom
+//         (x + 1) + width * (y - 1),   //Bottom Right
+//         (x - 1) + width * y,         //Left
+//         (x + 1) + width * y,         //Right
+//         (x - 1) + width * ((y + 1)), //Top Left
+//         x + width * (y + 1),         //Top
+//         (x + 1) + width * (y + 1)};  //Top Right
 
-    for (auto &&i : indexes)
-        if (i <= size && i >= 0)
-            neighbors.push_back((*grid)[i]);
-}
+//     for (auto &&i : indexes)
+//         if (i <= size && i >= 0)
+//             neighbors.push_back((*grid)[i]);
+// }
 
 void Grid::GetCurrent(int index, Cell *&current)
 {
     current = (*nextIteration)[index];
+}
+
+int Grid::GetNeighbors(int index)
+{
+    int xx = index % width;
+    int yy = index / width;
+
+    int n = 0, nx, ny;
+    for (int y = -1; y < 2; y++)
+    {
+        for (int x = -1; x < 2; x++)
+        {
+            if (!x && !y)
+                continue;
+            nx = (width + xx + x) % width;
+            ny = (height + yy + y) % width;
+            n += (*(*grid)[nx + ny * width]) == alive ? 1 : 0;
+        }
+    }
+    return n;
 }

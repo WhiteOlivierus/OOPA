@@ -11,9 +11,8 @@ public:
 
         //Do something
         if ((*current) == alive)
-        {
             current->FlipCell();
-        }
+
         return true;
     }
 };

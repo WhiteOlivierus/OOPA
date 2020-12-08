@@ -28,5 +28,6 @@ public:
     void Update();
     void FlipCell(int x, int y);
     void GetNeighbors(int index, std::vector<Cell *> &neighbors);
+    int GetNeighbors(int index);
     void GetCurrent(int index, Cell *&current);
 };

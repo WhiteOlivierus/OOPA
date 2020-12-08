@@ -10,7 +10,7 @@ public:
         BaseRule::Apply(grid, index);
 
         //Do something
-        if (neighborsAlive > 3 && (*current) == dead)
+        if (neighborsAlive == 3 && (*current) == dead)
         {
             current->FlipCell();
             return true;

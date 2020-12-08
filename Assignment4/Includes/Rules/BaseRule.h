@@ -16,11 +16,11 @@ public:
         (*grid).GetCurrent(index, current);
 
         //Get neighbors
-        (*grid).GetNeighbors(index, neighbors);
+        neighborsAlive = (*grid).GetNeighbors(index);
 
         //Count alive cells
-        for (auto &&neighbour : neighbors)
-            (*neighbour) == alive ? neighborsAlive++ : 0;
+        // for (auto &&neighbour : neighbors)
+        //     (*neighbour) == alive ? neighborsAlive++ : 0;
 
         return true;
     }
